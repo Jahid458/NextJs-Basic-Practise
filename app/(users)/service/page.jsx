@@ -41,8 +41,8 @@ export default function service() {
                 <Image
                  src={imgd}
                  alt="img1"
-                 fill={true}
-                 quality={100}
+                 fill={true} // w full hbe 
+                 quality={100}  
                  priority={false}
                  placeholder="blur"
                  blurDataURL=" "

@@ -1,6 +1,26 @@
 // import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navigation from "../components/Navigation";
+import {Roboto} from 'next/font/google'
+import { Work_Sans } from "next/font/google";
+
+const roboto = Roboto({
+  subsets:["latin"]
+})
+
+const workSans = Work_Sans({subsets: ['latin']})
+
+
+export default function RootLayout({children}){
+    return ( <html lang="en">
+      <body className={workSans.className}>
+        {/* <h1>Hello Layout</h1> */}
+        <Navigation />
+        {children}
+      </body>
+    </html>
+    ) 
+}
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -32,15 +52,6 @@ import Navigation from "../components/Navigation";
 // }
 
 
-export default function RootLayout({children}){
-    return ( <html lang="en">
-      <body>
-        {/* <h1>Hello Layout</h1> */}
-        <Navigation />
-        {children}
-      </body>
-    </html>
-    ) 
-}
+
 
 
