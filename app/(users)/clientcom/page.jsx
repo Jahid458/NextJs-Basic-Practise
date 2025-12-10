@@ -2,6 +2,7 @@
 
 
 import React, { useEffect, useState } from 'react'
+import Counter from './Counter';
 
  const URL = 'https://jsonplaceholder.typicode.com/posts' ; 
   
@@ -27,6 +28,9 @@ export default function ClientComp () {
         <button className='bg-amber-500 text-black p-5' 
       onClick={() => alert('hi')}
       >Click Me</button>
+
+      {/* By   default use client one folder use korle oi ta client component hoye jai  */}
+      <Counter />   
 
       <ul className='grid grid-cols-3 gap-5'>
             {
