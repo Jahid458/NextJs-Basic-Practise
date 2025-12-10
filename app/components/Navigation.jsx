@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Navigation() {
   return (
-    <header className="grid grid-cols-2">
+    <header className="grid grid-cols-2 font-work">
       <div className="">Main Logo</div>
       <nav>
         <ul className="flex gap-5">
