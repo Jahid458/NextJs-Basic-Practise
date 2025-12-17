@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const SingleProfile = (props) => {
-  return (
-    <h1>Dynamic Page</h1>
-  )
-}
+const SingleProfile = async (props) => {
+  console.log(props);
 
-export default SingleProfile
+  const user = await props.params;
+  console.log(user);
+  return <h1>user : {user.username}</h1>;
+};
+
+export default SingleProfile;
