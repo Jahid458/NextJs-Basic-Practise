@@ -9,3 +9,4 @@ const SingleProfilePost = async (props) => {
 };
 
 export default SingleProfilePost;
+//Dynamic route use in server component 
