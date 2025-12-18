@@ -11,7 +11,8 @@ const ProductList = () => {
    const category = searchParams.get('category');
    const entries = Object.fromEntries(searchParams.entries())
 
-
+    //use search params
+    
 
    console.log("pages: " , pages);
    console.log("Category: " , category);
