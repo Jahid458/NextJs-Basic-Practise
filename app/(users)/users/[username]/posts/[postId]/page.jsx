@@ -12,4 +12,4 @@ const SingleProfilePost =  (props) => {
 };
 
 export default SingleProfilePost;
-//Dynamic route use in server component 
+//  Dynamic route use in server component 
