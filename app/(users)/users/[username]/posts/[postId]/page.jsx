@@ -11,5 +11,5 @@ const SingleProfilePost =  (props) => {
   return <h1>user: {user.username}, postId: {user.postId}</h1>;
 };
 
-export default SingleProfilePost;
+export default SingleProfilePost; 
 //  Dynamic route use in server component 
