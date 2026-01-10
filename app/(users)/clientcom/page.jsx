@@ -11,7 +11,7 @@ export default function ClientComp() {
     const fetchData = async () => {
       const res = await fetch(URL);
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       setPostData(data);
 
       return data;
