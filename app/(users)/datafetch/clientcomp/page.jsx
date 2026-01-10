@@ -1,18 +1,18 @@
-'use client'
+"use client";
 
 import { User, Users, Star, TrendingUp } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const DataFetchClient = () => {
-  const [userInfo, setUserInfo] = useState({});
+const DataFetchServer = () => {
+  const [userInfo, setUserInfo] = useState({})
   const searchParams = useSearchParams();
   const userName = searchParams.get("name");
 
   // Handle case where no name is provided
   if (!userName) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-linear-to-br from-purple-50 via-blue-50 to-indigo-100 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">
@@ -27,23 +27,25 @@ const DataFetchClient = () => {
     );
   }
 
+ 
+
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    const revealUserGender = async () => {
-      const res = await fetch(`https://api.genderize.io/?name=${userName}`);
-      const userData = await res.json();
-      //   console.log(userData);
-      setUserInfo(userData);
-    };
+    const revealUserGender = async () => { ;
+    const res = await fetch(`https://api.genderize.io/?name=${userName}`);
+    const userData = await res.json();
+    console.log(userData);
+    setUserInfo(userData)
+    }
     revealUserGender();
   }, []);
 
-  if (!userInfo.gender) return null;
 
+    if(!userInfo.gender) return null
   const isMale = userInfo.gender === "male";
   const confidencePercentage = userInfo.probability * 100;
 
-  //   console.log("Random :", Math.random());
+
 
   return (
     <>
@@ -78,7 +80,6 @@ const DataFetchClient = () => {
                 {userInfo.name}
               </h1>
               <h1 className="text-red-500"> {Math.random()} </h1>
-
               <div
                 className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold ${
                   isMale
@@ -163,4 +164,4 @@ const DataFetchClient = () => {
   );
 };
 
-export default DataFetchClient;
+export default DataFetchServer;
