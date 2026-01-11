@@ -1,8 +1,15 @@
 import { User, Users, Star, TrendingUp } from "lucide-react";
+import { resolve } from "styled-jsx/css";
 
 const DataFetchServer = async (props) => {
   const searchParams = await props.searchParams;
   const userName = searchParams.name;
+
+  await new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve()
+    },3000)
+  })
 
   // Handle case where no name is provided
   if (!userName) {
